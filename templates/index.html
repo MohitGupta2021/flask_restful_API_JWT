@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>User Management</h1>
+
+        <!-- Create User Form -->
+        <div id="createUserForm">
+            <h2>Create User</h2>
+            <form id="createUser">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+                <button type="submit">Create User</button>
+            </form>
+        </div>
+
+        <!-- Authenticate User Form -->
+        <div id="authForm">
+            <h2>Authenticate User</h2>
+            <form id="authenticateUser">
+                <label for="authUsername">Username:</label>
+                <input type="text" id="authUsername" name="authUsername" required><br>
+                <label for="authPassword">Password:</label>
+                <input type="password" id="authPassword" name="authPassword" required><br>
+                <button type="submit">Authenticate</button>
+            </form>
+        </div>
+
+        <!-- User Actions -->
+        <div id="userActions" style="display:none;">
+            <h2>User Actions</h2>
+            <label for="userId">User ID:</label>
+            <input type="number" id="userId" name="userId" required><br>
+
+            <button id="getUser">Get User</button>
+            
+            <button id="getUserButton2">Get User Details</button>
+            <button id="updateUser">Update User</button>
+            <button id="deleteUser">Delete User</button>
+            <div id="userDetails"></div>
+            <div id="userDetailsDiv"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
